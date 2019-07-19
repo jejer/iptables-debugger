@@ -1,0 +1,19 @@
+[root@justin-cwes-03 ~]# ip route
+default via 10.75.119.1 dev eth1 
+10.75.119.0/26 dev eth1 proto kernel scope link src 10.75.119.9 
+169.254.0.0/16 dev eth0 scope link metric 1002 
+169.254.0.0/16 dev eth1 scope link metric 1003 
+169.254.169.254 via 10.75.119.4 dev eth1 proto static 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+192.16.1.0/24 dev eth0 proto kernel scope link src 192.16.1.29 
+192.168.1.0/26 via 192.16.1.45 dev eth0 proto bird 
+192.168.1.64 dev cali0ba4b41db25 scope link 
+blackhole 192.168.1.64/26 proto bird 
+192.168.1.65 dev cali63f5ba1a2f7 scope link 
+192.168.1.66 dev calie2194fadbed scope link 
+192.168.1.67 dev cali278e2842c31 scope link 
+192.168.1.68 dev calif1c0c8a9929 scope link 
+192.168.1.69 dev cali4782b5f13e2 scope link 
+192.168.1.72 dev cali69da8d5b01c scope link 
+192.168.1.128/26 via 192.16.1.51 dev eth0 proto bird 
+192.168.1.192/26 via 192.16.1.64 dev eth0 proto bird 

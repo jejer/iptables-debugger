@@ -1,0 +1,33 @@
+[root@justin-cwes-03 ~]# ipset list -o save
+create bcmtwhitelist hash:net family inet hashsize 1024 maxelem 65536
+add bcmtwhitelist 192.16.1.45
+add bcmtwhitelist 192.16.1.51
+add bcmtwhitelist 192.16.1.64
+add bcmtwhitelist 10.75.119.22
+add bcmtwhitelist 10.75.119.11
+add bcmtwhitelist 127.0.0.1
+add bcmtwhitelist 192.168.1.0/24
+add bcmtwhitelist 10.75.119.9
+add bcmtwhitelist 172.17.0.1
+add bcmtwhitelist 10.75.119.32
+add bcmtwhitelist 192.16.1.29
+create cali60all-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
+create cali60masq-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
+create cali60this-host hash:ip family inet6 hashsize 1024 maxelem 1048576
+add cali60this-host fe80::e0d0:ff:fead:db89
+add cali60this-host fe80::e071:27ff:fe63:9d0
+add cali60this-host fe80::f817:dff:fe3a:b001
+add cali60this-host fe80::accc:39ff:fed7:813e
+add cali60this-host ::1
+add cali60this-host fe80::f816:3eff:fede:ad53
+add cali60this-host fe80::f816:3eff:fe29:8ace
+add cali60this-host fe80::42:10ff:fe72:6790
+create cali40this-host hash:ip family inet hashsize 1024 maxelem 1048576
+add cali40this-host 172.17.0.1
+add cali40this-host 10.75.119.9
+add cali40this-host 127.0.0.1
+add cali40this-host 192.16.1.29
+create cali40all-ipam-pools hash:net family inet hashsize 1024 maxelem 1048576
+add cali40all-ipam-pools 192.168.1.0/24
+create cali40masq-ipam-pools hash:net family inet hashsize 1024 maxelem 1048576
+add cali40masq-ipam-pools 192.168.1.0/24
