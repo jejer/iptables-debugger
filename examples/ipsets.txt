@@ -1,33 +1,63 @@
-[root@justin-cwes-03 ~]# ipset list -o save
+[root@justin-cwes-01 ~]# ipset list -o save
 create bcmtwhitelist hash:net family inet hashsize 1024 maxelem 65536
-add bcmtwhitelist 192.16.1.45
-add bcmtwhitelist 192.16.1.51
-add bcmtwhitelist 192.16.1.64
 add bcmtwhitelist 10.75.119.22
-add bcmtwhitelist 10.75.119.11
-add bcmtwhitelist 127.0.0.1
-add bcmtwhitelist 192.168.1.0/24
-add bcmtwhitelist 10.75.119.9
-add bcmtwhitelist 172.17.0.1
-add bcmtwhitelist 10.75.119.32
 add bcmtwhitelist 192.16.1.29
-create cali60all-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
-create cali60masq-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
-create cali60this-host hash:ip family inet6 hashsize 1024 maxelem 1048576
-add cali60this-host fe80::e0d0:ff:fead:db89
-add cali60this-host fe80::e071:27ff:fe63:9d0
-add cali60this-host fe80::f817:dff:fe3a:b001
-add cali60this-host fe80::accc:39ff:fed7:813e
-add cali60this-host ::1
-add cali60this-host fe80::f816:3eff:fede:ad53
-add cali60this-host fe80::f816:3eff:fe29:8ace
-add cali60this-host fe80::42:10ff:fe72:6790
-create cali40this-host hash:ip family inet hashsize 1024 maxelem 1048576
-add cali40this-host 172.17.0.1
-add cali40this-host 10.75.119.9
-add cali40this-host 127.0.0.1
-add cali40this-host 192.16.1.29
+add bcmtwhitelist 10.75.119.9
+add bcmtwhitelist 10.75.119.32
+add bcmtwhitelist 10.75.119.11
+add bcmtwhitelist 192.16.1.51
+add bcmtwhitelist 192.16.1.45
+add bcmtwhitelist 192.16.1.64
+add bcmtwhitelist 192.168.1.0/24
+add bcmtwhitelist 127.0.0.1
+add bcmtwhitelist 172.17.0.1
 create cali40all-ipam-pools hash:net family inet hashsize 1024 maxelem 1048576
 add cali40all-ipam-pools 192.168.1.0/24
 create cali40masq-ipam-pools hash:net family inet hashsize 1024 maxelem 1048576
 add cali40masq-ipam-pools 192.168.1.0/24
+create cali60masq-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
+create cali60all-ipam-pools hash:net family inet6 hashsize 1024 maxelem 1048576
+create cali60this-host hash:ip family inet6 hashsize 1024 maxelem 1048576
+add cali60this-host fe80::d4d8:d0ff:fe0e:b6b0
+add cali60this-host fe80::c50:51ff:fefe:91ee
+add cali60this-host ::1
+add cali60this-host fe80::42:f8ff:feb1:d51
+add cali60this-host fe80::c4d1:31ff:fe4f:d125
+add cali60this-host fe80::f816:3eff:fe29:374c
+add cali60this-host fe80::f816:3eff:fe9c:22be
+add cali60this-host fe80::884f:7dff:fe7d:dc36
+create cali40this-host hash:ip family inet hashsize 1024 maxelem 1048576
+add cali40this-host 127.0.0.1
+add cali40this-host 10.75.119.32
+add cali40this-host 172.17.0.1
+add cali40this-host 192.16.1.51
+create cali40s:wshVv5vS9KoqQCk0vejZOWN hash:net family inet hashsize 1024 maxelem 1048576
+add cali40s:wshVv5vS9KoqQCk0vejZOWN 192.168.1.2
+create cali40s:F7ZiXz_PbMa5Hy2nQRJmYga hash:net family inet hashsize 1024 maxelem 1048576
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.69
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.2
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.129
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.132
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.68
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.130
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.136
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.195
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.64
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.192
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.133
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.65
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.0
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.74
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.66
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.131
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.193
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.197
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.67
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.3
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.1
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.196
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.198
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.199
+add cali40s:F7ZiXz_PbMa5Hy2nQRJmYga 192.168.1.128
+create cali60s:F7ZiXz_PbMa5Hy2nQRJmYga hash:net family inet6 hashsize 1024 maxelem 1048576
+create cali60s:wshVv5vS9KoqQCk0vejZOWN hash:net family inet6 hashsize 1024 maxelem 1048576

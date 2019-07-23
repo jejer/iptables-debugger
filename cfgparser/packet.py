@@ -42,7 +42,7 @@ class Packet(object):
 
     def stack_init(self, chain):
         self.stack = [{"chain": chain, "idx": 0}]
-        print(self.stack)
+        self._print_stack()
         return self
     def stack_top(self):
         return self.stack[len(self.stack)-1]
@@ -50,15 +50,21 @@ class Packet(object):
         last = self.stack.pop()
         last["idx"] += 1
         self.stack.append(last)
-        print(self.stack)
+        self._print_stack()
         return self
     def stack_pop(self):
         self.stack.pop()
-        print(self.stack)
+        self._print_stack()
         return self
     def stack_push(self, chain):
         self.stack.append({"chain": chain, "idx": 0})
-        print(self.stack)
+        self._print_stack()
         return self
     def stack_complete(self):
         return len(self.stack) == 0
+
+    def _print_stack(self):
+        pstack = []
+        for rule in self.stack:
+            pstack.append("{} - {}".format(rule["chain"], rule["idx"]))
+        print("chain stack: " + str(pstack))

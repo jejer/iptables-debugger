@@ -24,5 +24,5 @@ class Masquerade(object):
         else:
             packet.source = runner.get_masquerade_ip(packet.dest)
 
-        print(Fore.RED + "TARGET DNAT: " + str(original_ip) + ":" + str(oritinal_port) + " => " + str(packet.source) + ":" + str(packet.sport))
+        print(Fore.RED + "TARGET MASQUERADE: " + str(original_ip) + ":" + str(oritinal_port) + " => " + str(packet.source) + ":" + str(packet.sport))
         return "ACCEPT"

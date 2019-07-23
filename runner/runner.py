@@ -150,7 +150,9 @@ class Runner(object):
                 if route["blackhole"]:
                     print(Fore.RED + "BLACKHOLE ROUTE FOR PACKET, DEST: " + str(packet.dest))
                     return False
+                original_oface = packet.oface
                 packet.oface = route["dev"]
+                print(Fore.RED + "ROUTING DECISION: " + original_oface + " => " + packet.oface)
                 return True
         print(Fore.RED + "NO ROUTE FOR PACKET, DEST: " + str(packet.dest))
         return False

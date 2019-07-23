@@ -73,6 +73,6 @@ class Rule(object):
         return True
 
     def not_match_print(self, table):
-        print(Fore.CYAN + "[" + table + "] " + self.raw)
+        print(Fore.CYAN + "[" + table + "] SKIP " + self.raw)
     def match_print(self, table):
-        print(Fore.RED + "[" + table + "] " + self.raw)
+        print(Fore.GREEN + "[" + table + "] " + self.raw)
